@@ -1,0 +1,13 @@
+{
+  "name": "javascript_interfaces_e_heranca",
+  "version": "1.0.0",
+  "description": "Projeto de landing page feito no curso de 'JavaScript interfaces e Herança em Orientação a Objetos' da Alura.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Otavio Henrique de Lima e Silva",
+  "license": "ISC",
+  "type": "module"
+}
