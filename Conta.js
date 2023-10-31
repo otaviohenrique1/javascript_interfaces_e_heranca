@@ -13,7 +13,6 @@ export class Conta {
     }
   }
 
-
   get cliente() {
     return this._cliente;
   }
@@ -23,11 +22,17 @@ export class Conta {
   }
 
   saque(valor) {
-    if (this._saldo <= valor) {
-      return;
+    let taxa = 1;
+    return this._saque(taxa, valor);
+  }
+  
+  _saque(taxa, valor) {
+    const valorSacado = taxa * valor;
+    if (this._saldo >= valorSacado) {
+      this._saldo -= valorSacado;
+      return valorSacado;
     }
-    this._saldo -= valor;
-    return valor;
+    return 0;
   }
 
   depositar(valor) {

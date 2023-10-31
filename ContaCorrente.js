@@ -7,6 +7,11 @@ export class ContaCorrente extends Conta {
     super(0, cliente, agencia)
     ContaCorrente.numeroDeContas++;
   }
+
+  saque(valor) {
+    let taxa = 1.1;
+    return this._saque(taxa, valor);
+  }
 }
 
 /*

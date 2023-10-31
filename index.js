@@ -3,14 +3,14 @@ import { ContaCorrente } from "./ContaCorrente.js";
 import { ContaPoupanca } from "./ContaPoupanca.js";
 
 const cliente1 = new Cliente("Ricardo", 11222222111);
-const cliente1ContaCorrente = new ContaCorrente(1001, cliente1)
-cliente1ContaCorrente.depositar(1000);
-// cliente1ContaCorrente.saque(100);
-console.log("Extrato cliente1 => " + cliente1ContaCorrente.saldo);
+const contaCorrente = new ContaCorrente(1001, cliente1)
+contaCorrente.depositar(1000);
+contaCorrente.saque(100);
 const contaPoupanca = new ContaPoupanca(1000, cliente1, 1001);
+contaPoupanca.saque(100);
 
 console.log(cliente1);
-console.log(cliente1ContaCorrente);
+console.log(contaCorrente);
 console.log(contaPoupanca);
 
 /*
