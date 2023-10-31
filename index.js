@@ -1,4 +1,24 @@
 import { Cliente } from "./Cliente.js";
+import { Gerente } from "./Funcionarios/Gerente.js";
+import { Diretor } from "./Funcionarios/Diretor.js";
+import { SistemaAutenticacao } from "./SistemaAutenticacao.js";
+
+const diretor =  new Diretor("Rodrigo", 10000, 12345678900);
+diretor.cadastrarSenha("123456789");
+
+const gerente =  new Gerente("Ricardo",  5000, 12378945601);
+gerente.cadastrarSenha("987654321");
+
+const cliente = new Cliente("Lais", 74548754854, "456");
+const estaLogadoDiretor = SistemaAutenticacao.login(diretor, "123456789");
+const estaLogadoGerente = SistemaAutenticacao.login(gerente, "987654321");
+const estaLogadoCliente = SistemaAutenticacao.login(cliente, "456");
+
+console.log(estaLogadoDiretor);
+console.log(estaLogadoGerente);
+console.log(estaLogadoCliente);
+/*
+import { Cliente } from "./Cliente.js";
 // import { Conta } from "./Conta/Conta.js";
 import { ContaCorrente } from "./Conta/ContaCorrente.js";
 import { ContaPoupanca } from "./Conta/ContaPoupanca.js";
@@ -21,6 +41,7 @@ contaSalario.saque(100);
 console.log(contaCorrente);
 console.log(contaPoupanca);
 console.log(contaSalario);
+*/
 
 // const conta = new Conta(1000, cliente1, 1001);
 // console.log(conta);
